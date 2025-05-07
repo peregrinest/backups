@@ -74,10 +74,35 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
+  LuaSnip = {
+    loaded = true,
+    path = "/home/esat/.local/share/nvim/site/pack/packer/start/LuaSnip",
+    url = "https://github.com/L3MON4D3/LuaSnip"
+  },
   catppuccin = {
     loaded = true,
     path = "/home/esat/.local/share/nvim/site/pack/packer/start/catppuccin",
     url = "https://github.com/catppuccin/nvim"
+  },
+  ["cmp-buffer"] = {
+    loaded = true,
+    path = "/home/esat/.local/share/nvim/site/pack/packer/start/cmp-buffer",
+    url = "https://github.com/hrsh7th/cmp-buffer"
+  },
+  ["cmp-nvim-lsp"] = {
+    loaded = true,
+    path = "/home/esat/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
+    url = "https://github.com/hrsh7th/cmp-nvim-lsp"
+  },
+  ["cmp-path"] = {
+    loaded = true,
+    path = "/home/esat/.local/share/nvim/site/pack/packer/start/cmp-path",
+    url = "https://github.com/hrsh7th/cmp-path"
+  },
+  cmp_luasnip = {
+    loaded = true,
+    path = "/home/esat/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
+    url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
   ["gruvbox-material"] = {
     loaded = true,
@@ -88,6 +113,18 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/esat/.local/share/nvim/site/pack/packer/start/harpoon",
     url = "https://github.com/theprimeagen/harpoon"
+  },
+  ["nvim-cmp"] = {
+    config = { "\27LJ\2\n-\0\1\4\1\2\0\5-\1\0\0009\1\0\0019\3\1\0B\1\2\1K\0\1\0\1À\tbody\15lsp_expand‹\4\1\0\v\0\28\00046\0\0\0'\2\1\0B\0\2\0026\1\0\0'\3\2\0B\1\2\0029\2\3\0005\4\a\0005\5\5\0003\6\4\0=\6\6\5=\5\b\0049\5\t\0009\5\n\0059\5\v\0055\a\r\0009\b\t\0009\b\f\bB\b\1\2=\b\14\a9\b\t\0009\b\15\bB\b\1\2=\b\16\a9\b\t\0009\b\17\b5\n\18\0B\b\2\2=\b\19\a9\b\t\0009\b\20\bB\b\1\2=\b\21\aB\5\2\2=\5\t\0049\5\22\0009\5\23\0054\a\3\0005\b\24\0>\b\1\a5\b\25\0>\b\2\a4\b\3\0005\t\26\0>\t\1\b5\t\27\0>\t\2\bB\5\3\2=\5\23\4B\2\2\0012\0\0€K\0\1\0\1\0\1\tname\tpath\1\0\1\tname\vbuffer\1\0\1\tname\fluasnip\1\0\1\tname\rnvim_lsp\fsources\vconfig\14<C-Space>\rcomplete\t<CR>\1\0\1\vselect\2\fconfirm\f<S-Tab>\21select_prev_item\n<Tab>\1\0\4\t<CR>\0\14<C-Space>\0\n<Tab>\0\f<S-Tab>\0\21select_next_item\vinsert\vpreset\fmapping\fsnippet\1\0\3\fsnippet\0\fsources\0\fmapping\0\vexpand\1\0\1\vexpand\0\0\nsetup\fluasnip\bcmp\frequire\0" },
+    loaded = true,
+    path = "/home/esat/.local/share/nvim/site/pack/packer/start/nvim-cmp",
+    url = "https://github.com/hrsh7th/nvim-cmp"
+  },
+  ["nvim-lspconfig"] = {
+    config = { "\27LJ\2\nF\0\0\3\0\4\0\b6\0\0\0'\2\1\0B\0\2\0029\0\2\0009\0\3\0004\2\0\0B\0\2\1K\0\1\0\nsetup\vclangd\14lspconfig\frequire\0" },
+    loaded = true,
+    path = "/home/esat/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
+    url = "https://github.com/neovim/nvim-lspconfig"
   },
   ["nvim-treesitter"] = {
     loaded = true,
@@ -119,6 +156,12 @@ _G.packer_plugins = {
     path = "/home/esat/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
+  ["toggleterm.nvim"] = {
+    config = { "\27LJ\2\nÂ\1\0\0\4\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\2B\0\2\1K\0\1\0\15float_opts\1\0\1\vborder\vcurved\1\0\6\17persist_mode\2\20start_in_insert\2\20shade_terminals\2\17open_mapping\n<A-i>\14direction\nfloat\15float_opts\0\nsetup\15toggleterm\frequire\0" },
+    loaded = true,
+    path = "/home/esat/.local/share/nvim/site/pack/packer/start/toggleterm.nvim",
+    url = "https://github.com/akinsho/toggleterm.nvim"
+  },
   ["tokyo-night"] = {
     loaded = true,
     path = "/home/esat/.local/share/nvim/site/pack/packer/start/tokyo-night",
@@ -127,6 +170,18 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
+-- Config for: nvim-lspconfig
+time([[Config for nvim-lspconfig]], true)
+try_loadstring("\27LJ\2\nF\0\0\3\0\4\0\b6\0\0\0'\2\1\0B\0\2\0029\0\2\0009\0\3\0004\2\0\0B\0\2\1K\0\1\0\nsetup\vclangd\14lspconfig\frequire\0", "config", "nvim-lspconfig")
+time([[Config for nvim-lspconfig]], false)
+-- Config for: nvim-cmp
+time([[Config for nvim-cmp]], true)
+try_loadstring("\27LJ\2\n-\0\1\4\1\2\0\5-\1\0\0009\1\0\0019\3\1\0B\1\2\1K\0\1\0\1À\tbody\15lsp_expand‹\4\1\0\v\0\28\00046\0\0\0'\2\1\0B\0\2\0026\1\0\0'\3\2\0B\1\2\0029\2\3\0005\4\a\0005\5\5\0003\6\4\0=\6\6\5=\5\b\0049\5\t\0009\5\n\0059\5\v\0055\a\r\0009\b\t\0009\b\f\bB\b\1\2=\b\14\a9\b\t\0009\b\15\bB\b\1\2=\b\16\a9\b\t\0009\b\17\b5\n\18\0B\b\2\2=\b\19\a9\b\t\0009\b\20\bB\b\1\2=\b\21\aB\5\2\2=\5\t\0049\5\22\0009\5\23\0054\a\3\0005\b\24\0>\b\1\a5\b\25\0>\b\2\a4\b\3\0005\t\26\0>\t\1\b5\t\27\0>\t\2\bB\5\3\2=\5\23\4B\2\2\0012\0\0€K\0\1\0\1\0\1\tname\tpath\1\0\1\tname\vbuffer\1\0\1\tname\fluasnip\1\0\1\tname\rnvim_lsp\fsources\vconfig\14<C-Space>\rcomplete\t<CR>\1\0\1\vselect\2\fconfirm\f<S-Tab>\21select_prev_item\n<Tab>\1\0\4\t<CR>\0\14<C-Space>\0\n<Tab>\0\f<S-Tab>\0\21select_next_item\vinsert\vpreset\fmapping\fsnippet\1\0\3\fsnippet\0\fsources\0\fmapping\0\vexpand\1\0\1\vexpand\0\0\nsetup\fluasnip\bcmp\frequire\0", "config", "nvim-cmp")
+time([[Config for nvim-cmp]], false)
+-- Config for: toggleterm.nvim
+time([[Config for toggleterm.nvim]], true)
+try_loadstring("\27LJ\2\nÂ\1\0\0\4\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\2B\0\2\1K\0\1\0\15float_opts\1\0\1\vborder\vcurved\1\0\6\17persist_mode\2\20start_in_insert\2\20shade_terminals\2\17open_mapping\n<A-i>\14direction\nfloat\15float_opts\0\nsetup\15toggleterm\frequire\0", "config", "toggleterm.nvim")
+time([[Config for toggleterm.nvim]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then

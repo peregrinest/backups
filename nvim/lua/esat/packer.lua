@@ -25,5 +25,42 @@ return require('packer').startup(function(use)
 	use('theprimeagen/harpoon')
 	use ('nvim-treesitter/playground') 
 	use ('nvim-lua/plenary.nvim')
+
+	use {
+		"akinsho/toggleterm.nvim",
+		version = "*",
+		config = function()
+			require("toggleterm").setup({
+				open_mapping = [[<A-i>]], -- ALT + i
+				direction = "float",      -- terminal tipi: float | horizontal | vertical
+				shade_terminals = true,   -- arka planı karartır
+				start_in_insert = true,   -- terminal insert modda başlasın
+				persist_mode = true,      -- çıkınca insert/normal modu hatırla
+				float_opts = {
+					border = "curved",      -- köşeleri yumuşak yapar
+				},
+			})
+		end
+	}
+	use {
+		"neovim/nvim-lspconfig", -- LSP istemcisi
+		config = function()
+			require("lspconfig").clangd.setup({})
+		end
+		-- LSP yeteneklerini cmp ile birleştir
+
+	}
+	--AUTO COMPLETE
+	use {
+		"hrsh7th/nvim-cmp",
+		requires = {
+			"hrsh7th/cmp-nvim-lsp",     -- LSP'den tamamlama
+			"hrsh7th/cmp-buffer",       -- buffer'dan kelime tamamlama
+			"hrsh7th/cmp-path",         -- dosya yolu tamamlama
+			"L3MON4D3/LuaSnip",         -- snippet motoru
+			"saadparwaiz1/cmp_luasnip", -- snippet'leri cmp'de gösterme
+		}
+
+	}
 end)
 
