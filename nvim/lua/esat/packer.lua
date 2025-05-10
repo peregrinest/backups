@@ -42,25 +42,18 @@ return require('packer').startup(function(use)
 			})
 		end
 	}
-	use {
-		"neovim/nvim-lspconfig", -- LSP istemcisi
-		config = function()
-			require("lspconfig").clangd.setup({})
-		end
-		-- LSP yeteneklerini cmp ile birleştir
+use {
+  "neovim/nvim-lspconfig"
+}
 
-	}
-	--AUTO COMPLETE
-	use {
-		"hrsh7th/nvim-cmp",
-		requires = {
-			"hrsh7th/cmp-nvim-lsp",     -- LSP'den tamamlama
-			"hrsh7th/cmp-buffer",       -- buffer'dan kelime tamamlama
-			"hrsh7th/cmp-path",         -- dosya yolu tamamlama
-			"L3MON4D3/LuaSnip",         -- snippet motoru
-			"saadparwaiz1/cmp_luasnip", -- snippet'leri cmp'de gösterme
-		}
-
-	}
-end)
+use {
+  "hrsh7th/nvim-cmp",
+  requires = {
+    "hrsh7th/cmp-nvim-lsp",
+    "hrsh7th/cmp-buffer",
+    "hrsh7th/cmp-path",
+    "L3MON4D3/LuaSnip",
+    "saadparwaiz1/cmp_luasnip",
+  }}
+  end)
 
